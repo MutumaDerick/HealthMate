@@ -1,17 +1,16 @@
 # health_mate
 
-A new Flutter project.
+HealthMate is a Flutter-based mobile application aimed at promoting health and well-being, aligning with the United Nations' Sustainable Development Goal (SDG) 3: "Ensure healthy lives and promote well-being for all at all ages."
 
-## Getting Started
+## Key Features:
+User-Centered Design: A simple and intuitive interface to monitor personal health metrics.
+Database Integration: Seamless storage and retrieval of user data using a robust database system.
+Health Monitoring: Track key health indicators such as activity levels, nutrition, and more.
+Wellness Resources: Access curated health and wellness resources for maintaining a healthy lifestyle.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# HealthMate
+## Tech Stack:
+Frontend: Flutter for cross-platform development (iOS & Android).
+Backend: Integrated with a database for real-time data storage and updates.
+Goal:
+HealthMate's primary objective is to provide users with the tools to manage their health effectively while contributing to global efforts in promoting health and well-being in line with SDG 3.
