@@ -68,7 +68,6 @@ class DashboardGrid extends StatelessWidget {
     'Pharmacy',
     'Schedule',
     'Infectious Disease',
-    
   ];
 
   List<Icon> catIcons = [
@@ -134,7 +133,6 @@ class DashboardGrid extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.lightBlue[50],
               borderRadius: BorderRadius.circular(10),
-             
             ),
             child: TextFormField(
               textAlignVertical: TextAlignVertical.center,
@@ -149,8 +147,8 @@ class DashboardGrid extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(left: 16),
-            child:
-                Text("Services", style: Theme.of(context).textTheme.bodyMedium),
+            child: Text("Services",
+                style: Theme.of(context).textTheme.headlineSmall),
           ),
           SizedBox(height: 20),
           Container(
@@ -192,37 +190,82 @@ class DashboardGrid extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.lightBlue[50],
               borderRadius: BorderRadius.circular(10),
-              boxShadow: [],
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 2,
+                  blurRadius: 4,
+                  offset: Offset(0, 3),
+                ),
+              ],
             ),
-            
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      Text("Get the Best\nMedical Service",
+                          style: Theme.of(context).textTheme.headlineMedium),
+                      SizedBox(height: 12),
+                      Text("Book an appointment now",
+                          style: Theme.of(context).textTheme.bodySmall),
+                    ],
+                  ),
+                  Spacer(),
+                  Image.asset("images/doctor3.jpg",
+                      width: 250,
+                      height: 200,
+                      fit: BoxFit.cover,
+                      scale: 0.8,
+                      alignment: Alignment.centerRight,
+                      colorBlendMode: BlendMode.lighten),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16),
+            child: Text("Upcoming Appointments",
+                style: Theme.of(context).textTheme.headlineSmall),
+          ),
+          SizedBox(height: 20),
+          Container(
+            height: 200,
+            child: ListView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              itemCount: imgs.length,
+              itemBuilder: (context, index) {
+                return InkWell(
+                  onTap: () {},
+                  child: Column(
+                    children: [
+                      Container(
+                        margin:
+                            EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                        height: 160,
+                        width: 160,
+                        decoration: BoxDecoration(
+                          color: Colors.lightBlue[50],
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Image.asset(imgs[index],
+                            width: 160,
+                            height: 160,
+                            fit: BoxFit.cover,
+                            scale: 0.8,
+                            alignment: Alignment.center,
+                            colorBlendMode: BlendMode.lighten),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),
     );
   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     const border = OutlineInputBorder(
-//       borderRadius: BorderRadius.all(Radius.circular(10)),
-//       borderSide: BorderSide(color: Colors.grey),
-//     );
-//     return const SafeArea(
-//         child: Column(
-//       children: [
-//         Padding(
-//           padding: EdgeInsets.all(16.0),
-//           child: Expanded(
-//               child: TextField(
-//             decoration: InputDecoration(
-//               hintText: 'Search',
-//               suffixIcon: Icon(Icons.filter_list),
-//               border: border,
-//               enabledBorder: border,
-//             ),
-//           )),
-//         )
-//       ],
-//     ));
-//   }
 }

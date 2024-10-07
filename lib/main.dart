@@ -22,6 +22,8 @@ class HealthMateApp extends StatelessWidget {
           
           headlineMedium: TextStyle(
               fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
+              headlineSmall: TextStyle(
+                fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
           bodyMedium: TextStyle(fontSize: 20, color: Colors.black),
           bodySmall: TextStyle(fontSize: 14, color: Colors.black),
         ),
