@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:health_mate/pages/dashboard.dart';
+import 'package:health_mate/pages/landing.dart';
+
 
 void main() {
   runApp(HealthMateApp());
@@ -13,7 +14,7 @@ class HealthMateApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Health Mate',
-      home: const DashboardPage(),
+      home: const LandingPage(),
       theme: ThemeData(
         primaryColor: Colors.lightBlue[900],
         colorScheme:

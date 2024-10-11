@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -67,12 +69,37 @@ class _LoginPageState extends State<LoginPage> {
                     return 'Please enter your password';
                   }
                   if (value.length < 6) {
-                    return 'Password must be at least 6 characters long';
+                    return 'Password must be at least 6 characters';
                   }
                   return null;
                 },
               ),
               SizedBox(height: 20),
+
+              // Confirm Password
+              TextFormField(
+                controller: confirmPasswordController,
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: "Confirm Password",
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please confirm your password';
+                  }
+                  if (value != passwordController.text) {
+                    return 'Passwords do not match';
+                  }
+                  return null;
+                },
+              ),
+              SizedBox(height: 20),
+
+              // Register Button
               Material(
                 color: Theme.of(context).colorScheme.primary,
                 borderRadius: BorderRadius.circular(10),
@@ -85,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                     height: 48,
                     alignment: Alignment.center,
                     child: Text(
-                      "LOG IN",
+                      "SIGN UP",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
