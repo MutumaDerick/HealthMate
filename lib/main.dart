@@ -54,6 +54,8 @@ class HealthMateApp extends StatelessWidget {
             backgroundColor: Colors.blueAccent,
           ),
         ),
+        iconTheme: IconThemeData(color: Colors.grey,
+        size: 24),
       ),
 
       themeMode: ThemeMode.system,

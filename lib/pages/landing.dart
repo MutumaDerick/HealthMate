@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_mate/Navbar_widget.dart';
 import 'package:health_mate/pages/login.dart';
 import 'package:health_mate/pages/register.dart';
 
@@ -19,7 +20,11 @@ class LandingPage extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) =>));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => NavbarWidget(),
+                      ));
                 },
                 child: Text(
                   "SKIP",
@@ -67,7 +72,10 @@ class LandingPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterPage()));
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width / 2 - 40,
