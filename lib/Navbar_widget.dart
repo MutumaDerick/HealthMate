@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:health_mate/pages/dashboard.dart';
+import 'package:health_mate/pages/schedule.dart';
+import 'package:health_mate/pages/reports.dart';
+import 'package:health_mate/pages/notifications.dart';
 
 class NavbarWidget extends StatefulWidget {
   const NavbarWidget({super.key});
@@ -12,12 +15,10 @@ class _NavbarWidgetState extends State<NavbarWidget> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = <Widget>[
-    // Home page
     DashboardPage(),
-
-    // SchedulePage(),
-    // ReportPage(),
-    // NotificationPage(),
+    SchedulePage(),
+    ReportPage(),
+    NotificationPage(),
   ];
 
   void _onItemTapped(int index) {
