@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_mate/pages/landing.dart';
 
-
 void main() {
   runApp(HealthMateApp());
 }
@@ -20,11 +19,10 @@ class HealthMateApp extends StatelessWidget {
         colorScheme:
             ColorScheme.fromSwatch().copyWith(secondary: Colors.lightBlue[800]),
         textTheme: TextTheme(
-          
           headlineMedium: TextStyle(
               fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
-              headlineSmall: TextStyle(
-                fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
+          headlineSmall: TextStyle(
+              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
           bodyMedium: TextStyle(fontSize: 20, color: Colors.black),
           bodySmall: TextStyle(fontSize: 14, color: Colors.black),
         ),
@@ -48,16 +46,13 @@ class HealthMateApp extends StatelessWidget {
               fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
           bodyMedium: TextStyle(fontSize: 20, color: Colors.white),
         ),
-
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blueAccent,
+            backgroundColor: Colors.blue[300],
           ),
         ),
-        iconTheme: IconThemeData(color: Colors.grey,
-        size: 24),
+        iconTheme: IconThemeData(color: Colors.grey, size: 24),
       ),
-
       themeMode: ThemeMode.system,
     );
   }

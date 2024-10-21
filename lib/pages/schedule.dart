@@ -88,8 +88,10 @@ class _SchedulePageState extends State<SchedulePage> {
                 ),
                 Spacer(),
                 ElevatedButton(
+                  style: Theme.of(context).elevatedButtonTheme.style,
                   onPressed: () => _selectDate(context),
-                  child: Text('Select date'),
+                  child: Text('Select date',
+                      style: TextStyle(color: Colors.black)),
                 ),
               ],
             ),
@@ -104,8 +106,10 @@ class _SchedulePageState extends State<SchedulePage> {
                   margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                   child: ListTile(
                     leading: Icon(MdiIcons.calendarCheck),
-                    title: Text('${appointment["type"]} with ${appointment["doctor"]}'),
-                    subtitle: Text('${appointment["date"]} at ${appointment["time"]}'),
+                    title: Text(
+                        '${appointment["type"]} with ${appointment["doctor"]}'),
+                    subtitle: Text(
+                        '${appointment["date"]} at ${appointment["time"]}'),
                     trailing: PopupMenuButton(
                       onSelected: (value) {
                         if (value == 'edit') {

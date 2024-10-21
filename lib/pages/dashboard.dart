@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_mate/pages/appointment.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -179,7 +180,7 @@ class DashboardPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Container(
-              height: 150,
+              height: 160,
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 1,
@@ -190,7 +191,14 @@ class DashboardPage extends StatelessWidget {
                 itemCount: names.length,
                 itemBuilder: (context, index) {
                   return InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AppointmentPage(),
+                        ),
+                      );
+                    },
                     child: Container(
                       margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                       padding: EdgeInsets.all(8),
@@ -231,7 +239,7 @@ class DashboardPage extends StatelessWidget {
                           Column(
                             children: [
                               Align(
-                                alignment: Alignment.topRight,
+                                alignment: Alignment.centerRight,
                                 child: Icon(Icons.more_horiz,
                                     color: const Color.fromARGB(
                                         184, 255, 255, 255)),
